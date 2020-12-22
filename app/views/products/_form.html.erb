@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control mb-3' %>
   </div>
 
   <div class="field">
-    <%= form.label :money %>
-    <%= form.text_field :money %>
+    <%= form.label :money, class: 'form-label' %>
+    <%= form.text_field :money, class: 'form-control mb-3' %>
   </div>
 
   <div class="field">
-    <%= form.label :start_at %>
+    <%= form.label :start_at, class: 'form-label' %>
     <%= form.datetime_select :start_at %>
   </div>
 
@@ -32,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :currency %>
-    <select name="product[currency]">
+    <%= form.label :currency, class: 'form-label' %>
+    <select name="product[currency]" class="form-control form-select mb-3">
       <option value="NTD">NTD</option>
       <option value="USD">USD</option>
       <option value="HKD">HKD</option>
@@ -41,14 +41,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :tag_list %>
-    <select name="product[tag_list][]" multiple= 'true'>
+    <%= form.label :tag_list, class: 'form-label' %>
+    <select name="product[tag_list][]" multiple= 'true' class="form-control form-select mb-3">
       <option value="tag1">tag1</option>
       <option value="tag2">tag2</option>
       <option value="tag3">tag3</option>
     </select>
   </div>
-  <div class="actions">
+  <div class="actions mb-3">
     <%= form.submit %>
   </div>
 <% end %>

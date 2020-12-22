@@ -1,7 +1,7 @@
 <h1>Products</h1>
 
-<table>
-  <thead>
+<table class="table table-striped">
+  <thead class="table-dark">
     <tr>
       <th>Name</th>
       <th>Money</th>
@@ -22,9 +22,9 @@
         <td><%= display_tag_list(product.tags) %></td>
         <td><%= product.start_at %></td>
         <td><%= product.end_at %></td>
-        <td><%= link_to 'Show', product %></td>
+        <td class="text-secondary"><%= link_to 'Show', product, class: "text-secondary"  %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-secondary"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-secondary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New', new_product_path, class: "text-secondary"  %>

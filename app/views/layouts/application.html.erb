@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <%= render 'layouts/messages'%>
-    <%= yield %>
+    <div class="container">
+      <%= render 'layouts/messages' if notice %>
+      <%= yield %>
+    </div>
   </body>
 </html>
